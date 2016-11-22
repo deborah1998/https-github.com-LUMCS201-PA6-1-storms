@@ -12,7 +12,8 @@ Both partners agree to take the lead on their assigned functions, AND to help th
 
 -------------------- Fill out below this line -------------------------------
 1. Plan for meeting: What days/times do you commit to meeting to work on and discuss this assignment? You should have planned meeting times throughout the project.
-
+Mondays:3-5pm Tuesdays:10:40am to 12:00pm Wednesday:5:30 to 6:30pm Thursday:11:30 to 1, 4:30 to 5:30 Friday:3 to 4
+*Saturday or Sunday if neccesary
 
 
 2. Lead programmer: For every function you need in your program, list the person who is the lead programmer. 
@@ -25,5 +26,5 @@ List each function name and the lead for that function (must match function name
 
 
 3. Type your name below to act as your signature to show that you have read and will abide by this partner agreement:
-Partner1:
-Partner2:
+Partner1:Deborah Onyuka
+Partner2:Holly Wright
