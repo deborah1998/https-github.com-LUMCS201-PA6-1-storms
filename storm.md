@@ -42,3 +42,5 @@ If you are a group of 3, you will need to answer the following questions as well
 ###Error Checking
 You must have all standard file error checking. You do not need to do any further value error checking, other than that if you can't find an answer (for instance, the user gives an invalid state), you must tell the user that no data was found. 
 Be sure to implement good comparisons for string input so that case and whitespace don't cause it to not work correctly.
+
+Be careful with your file, as many of the damage amounts are empty. Check for "" (empty string) before typecasting if you use those values in your own question.
