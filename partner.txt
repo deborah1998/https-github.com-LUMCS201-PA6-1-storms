@@ -25,9 +25,18 @@ List each function name and the lead for that function (must match function name
 
 Function 1: Storms per month graph
 leader:Holly
-Function 2:storms in certain years
+Function 2:Storms in certain years
 leader:Deborah
-Function 3:
+Function 3:Common Storm in state
+leader:Holly
+Function4:number of injuries in specific state
+leader:Deborah
+Function 5: read file
+leader:Holly
+Function 6: process_file
+leader:Deborah
+Function 7: main
+leader:Holly
 
 
 
