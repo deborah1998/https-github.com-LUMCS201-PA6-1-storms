@@ -23,6 +23,12 @@ Don't forget to think about any error checking functions you might need.
 Note that it is expected that you pair program to get the file reading part due by the design deadline working. 
 List each function name and the lead for that function (must match function name in design document):
 
+Function 1: Storms per month graph
+leader:Holly
+Function 2:storms in certain years
+leader:Deborah
+Function 3:
+
 
 
 3. Type your name below to act as your signature to show that you have read and will abide by this partner agreement:
