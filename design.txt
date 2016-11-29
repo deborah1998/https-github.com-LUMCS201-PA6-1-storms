@@ -13,7 +13,7 @@ Algorithm:
 Function Name:process_file
 Purpose:To read from the file
 Parameters:filename
-Return:none
+Return:storm list
 Algorithm:
 1.)try
 2.)create an empty list
@@ -21,3 +21,8 @@ Algorithm:
 4.)for every line in the file
     a.split line at the comma
     b.append line to the empty list
+5.)close the input file
+6.)except an error
+    a.)output "Sorry File Not Found"
+    b.)end the program
+7.)return the list
