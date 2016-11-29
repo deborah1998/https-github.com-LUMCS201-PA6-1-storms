@@ -4,10 +4,11 @@ Purpose: get a valid file from the user
 Parameters:none
 Return:filename
 Algorithm:
-1.)Ask the user to input a valid filename
-2.) While the file does not exist
+1.) Import os
+2.)Ask the user to input a valid filename
+3.) While the file does not exist
     a.Ask the user to enter a valid filename
-3.)return filename
+4.)return filename
 
 
 Function Name:process_file
@@ -26,3 +27,51 @@ Algorithm:
     a.)output "Sorry File Not Found"
     b.)end the program
 7.)return the list
+
+Function Name:storm_graph
+Purpose:To generate a graph for the storms per month
+Parameters:storm list
+Return:graph
+Algorithm:
+1.) Import pylab
+2.)open the file
+3.)create an empty list for x and y axis
+3.)jan_count = 0
+4.)feb_count = 0
+5.)mar_count = 0
+6.)apr_count = 0
+7.)may_count = 0
+8.)jun_count = 0
+9.)jul_count = 0
+10.)aug_count = 0
+11.)sep_count = 0
+12.)oct_count = 0
+13.)nov_count = 0
+14.)dec_count = 0
+4.)for line in list
+    a.if index 0 [4:5] == 01
+        i.jan_count += 1
+    a.if index 0 [4:5] == 02
+        i.feb_count += 1
+    a.if index 0 [4:5] == 03
+        i.mar_count += 1
+    a.if index 0 [4:5] == 04
+        apr_count += 1
+    a.if index 0 [4:5] == 05
+        may_count += 1
+    a.if index 0 [4:5] == 06
+        jun_count += 1
+    a.if index 0 [4:5] == 07
+        jul_count += 1
+    a.if index 0 [4:5] == 08
+        aug_count += 1
+    a.if index 0 [4:5] == 09
+        sep_count += 1
+    a.if index 0 [4:5] == 10
+        oct_count += 1
+    a.if index 0 [4:5] == 11
+        nov_count += 1
+    a.if index 0 [4:5] == 12
+        dec_count += 1
+    a.append x at index 0 [4:5]
+    b.append y at index
