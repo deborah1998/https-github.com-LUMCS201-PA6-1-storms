@@ -1,0 +1,19 @@
+
+Function Name:get_file
+Purpose: get a valid file from the user
+Parameters:none
+Return:filename
+Algorithm:
+1.)Ask the user to input a valid filename
+2.) While the file does not exist
+    a.Ask the user to enter a valid filename
+3.)return filename
+
+
+Function Name:read_file
+Purpose:To read from the file
+Parameters:filename
+Return:none
+Algorithm:
+1.)try
+2.)

@@ -31,8 +31,13 @@ Dr. Olsen will tell you if your plan is OK or if you need to make changes.
 ## DESIGN (10pts)
 You must submit:
 * partner.txt: Your partner agreement as described in the prior section
-* design.txt: A list of functions with function name, purpose, parameters (describe), and return value (describe). The names here should match the names used in your partner agreement to list who will be lead programmer.
-* A .py file that properly reads from your input file, stores that information in an appropriate list (list of lists, list of words, etc -- depends on your data), and outputs the list to the user so you can see that it works. User input of a filename should be fully implemented with error checking, and no user input or output should occur in the file processing function. You should have 3 implemented functions at this point.
+* design.txt: A list of functions with function name, purpose, parameters (describe), and return value (describe).
+ The names here should match the names used in your partner agreement to list who will be lead programmer.
+* A .py file that properly reads from your input file,
+ stores that information in an appropriate list (list of lists, list of words, etc -- depends on your data),
+ and outputs the list to the user so you can see that it works.
+  User input of a filename should be fully implemented with error checking,
+  and no user input or output should occur in the file processing function. You should have 3 implemented functions at this point.
 
 ## ASSIGNMENT REMINDERS & WORKING AS A PAIR/GROUP
 * Follow the programming assignment requirements document for comments, formatting, etc. You will need to add function comments above each function in your code. 
