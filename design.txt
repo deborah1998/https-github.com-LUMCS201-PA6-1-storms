@@ -85,7 +85,19 @@ Purpose:Do more storms happen in some years than others
 Parameters:storm list
 Return:
 Algorithm:
-1.)
+
+1.)Ask the user for a new file to input
+2.)call the process_file function for the user's new file(read from the new file)
+3.)open the output file
+4.)for line in file 1
+5.)for line in new file
+    5.)for i in range of the length of storms list
+    a.)if storm _list1[0][0:4] equals storms list2[0][0:4] (the first first four letters in the index to get the year)
+    b.)print storms list[0][0:4] to the file(the storm in the specific year from both files)
+6.)close the output file
+
+
+
 
 Function Name:common_storm
 Purpose:What is the most common storm for a particular state?

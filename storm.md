@@ -28,8 +28,13 @@ You have multiple files of the same format. Each file has data for an entire yea
 
 ###Program Abilities
 Your program must answer the following questions:
-* Do some months have more storms than others? Create a graph that displays the number of storms overall per month throughout the year (i.e. the number of total storms in January, then February, etc). 
-* Do more storms happen in some years than others? Ask the user for a second file as input. Then compare how many more storms of each type happened in this year versus the first input file (note that your answer may be negative if fewer occurred). Output this information to a file so that on each line you have a storm type followed by the difference between years.
+* Do some months have more storms than others?
+Create a graph that displays the number of storms overall per month throughout the year (i.e. the number of total storms in January, then February, etc).
+* Do more storms happen in some years than others?
+Ask the user for a second file as input.
+Then compare how many more storms of each type happened in this year versus the first input file
+(note that your answer may be negative if fewer occurred).
+ Output this information to a file so that on each line you have a storm type followed by the difference between years.
 * What is the most common storm for a particular state? The user provides the state.
 * A question of your choosing!
 
