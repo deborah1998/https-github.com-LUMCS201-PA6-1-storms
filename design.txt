@@ -92,5 +92,22 @@ Parameters:storm list, given_state
 Return:most common storm
 Algorithm:
 1.)for i in list
+    a.create an empty dictionary (storm_dict)
     a.if storm_list[5] == given_state
+        i. if word is in dictionary
+            1. add to dictionary with value 1
+    c.
+    d. return storm_dict
+
+Function Name:injuries_state
+Purpose:How many injuries in a specific state
+Parameters:storm list, given_state
+Return:how many injuries
+Algorithm:
+1.)Ask user or a state
+2.)total_injuries = 0
+2.) if given_state == storm_list[6]
+        a.for i in storm_list:
+            i.total_injuries += storm_list[i][8]
+4.)output total_injuries
 
