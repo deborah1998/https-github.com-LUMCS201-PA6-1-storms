@@ -36,19 +36,19 @@ Algorithm:
 1.) Import pylab
 2.)open the file
 3.)create an empty list for x and y axis
-3.)jan_count = 0
-4.)feb_count = 0
-5.)mar_count = 0
-6.)apr_count = 0
-7.)may_count = 0
-8.)jun_count = 0
-9.)jul_count = 0
-10.)aug_count = 0
-11.)sep_count = 0
-12.)oct_count = 0
-13.)nov_count = 0
-14.)dec_count = 0
-4.)for line in list
+4.)jan_count = 0
+5.)feb_count = 0
+6.)mar_count = 0
+7.)apr_count = 0
+8.)may_count = 0
+9.)jun_count = 0
+10.)jul_count = 0
+11.)aug_count = 0
+12.)sep_count = 0
+13.)oct_count = 0
+14.)nov_count = 0
+15.)dec_count = 0
+16.)for line in list
     a.if index 0 [4:5] == 01
         i.jan_count += 1
     a.if index 0 [4:5] == 02
@@ -56,22 +56,41 @@ Algorithm:
     a.if index 0 [4:5] == 03
         i.mar_count += 1
     a.if index 0 [4:5] == 04
-        apr_count += 1
+        i.apr_count += 1
     a.if index 0 [4:5] == 05
-        may_count += 1
+        i.may_count += 1
     a.if index 0 [4:5] == 06
-        jun_count += 1
+        i.jun_count += 1
     a.if index 0 [4:5] == 07
-        jul_count += 1
+        i.jul_count += 1
     a.if index 0 [4:5] == 08
-        aug_count += 1
+        i.aug_count += 1
     a.if index 0 [4:5] == 09
-        sep_count += 1
+        i.sep_count += 1
     a.if index 0 [4:5] == 10
-        oct_count += 1
+        i.oct_count += 1
     a.if index 0 [4:5] == 11
-        nov_count += 1
+        i.nov_count += 1
     a.if index 0 [4:5] == 12
-        dec_count += 1
+        i.dec_count += 1
     a.append x at index 0 [4:5]
-    b.append y at index
+    b.append y
+17.)close the file
+18.)Plot x and y
+19.)Label x, y axis and title
+20.)Save the graph
+
+Function Name:storm_years
+Purpose:Do more storms happen in some years than others
+Parameters:storm list
+Return:
+Algorithm:
+
+Function Name:common_storm
+Purpose:What is the most common storm for a particular state?
+Parameters:storm list, given_state
+Return:most common storm
+Algorithm:
+1.)for i in list
+    a.if storm_list[5] == given_state
+
