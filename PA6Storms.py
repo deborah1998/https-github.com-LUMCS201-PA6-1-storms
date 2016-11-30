@@ -22,23 +22,22 @@ def inputFile():
 
 
 #Purpose: read from the file
-#Paramaters:none
+#Paramaters:filename
 #Return:list
- def process_file(filename):
-     try:
-         storm_list1=[]
-         file=open(filename,"r")
-         for line in file:
-            storm_list1.append(line.split(","))
-            file.close()
-        except FileNotFoundError:
-        print("Sorry File Not Found")
+
+def read_file(filename):
+    try:
+        inputfile=open(filename,"r")
+        storms_list1=[]
+        for line in inputfile:
+            storms_list1.append(line.split(","))
+        inputfile.close()
+    except FileNotFoundError:
+        print("Sorry this file is not Found")
         SystemExit(1)
-     return storm_list1
+    return storms_list1
 
 
 
 
 
-
-F
