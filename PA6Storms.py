@@ -38,6 +38,8 @@ def read_file(filename):
     return storms_list1
 
 
+#Purpose:
+
 
 def main():
     filename =inputFile()
