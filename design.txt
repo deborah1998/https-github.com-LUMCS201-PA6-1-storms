@@ -128,8 +128,12 @@ Algorithm:
 
 
 
-
 Function Name:main
 Purpose:run the overall program
 Paramaters:none
 Return:none
+1.)Output the purpose of the program to the user
+2.)call read_file
+3.)call process_file
+4.)Ask the user for the name of the output file
+5.)call storm_years file
