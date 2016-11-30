@@ -107,7 +107,7 @@ Algorithm:
 1.)for i in list
     a.create an empty dictionary (storm_dict)
     a.if storm_list[5] == given_state
-        i. if word is in dictionary
+        i. if word is in dictionary:
             1. add to dictionary with value 1
     c.
     d. return storm_dict
@@ -123,6 +123,7 @@ Algorithm:
         a.for i in storm_list:
             i.total_injuries += storm_list[i][8]
 4.)output total_injuries
+
 
 
 
