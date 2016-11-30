@@ -29,7 +29,6 @@ def read_file(filename):
     storms_list1 = []
     try:
         inputfile=open(filename,"r")
-        storms_list1=[]
         for line in inputfile:
             storms_list1.append(line.split(","))
         inputfile.close()
