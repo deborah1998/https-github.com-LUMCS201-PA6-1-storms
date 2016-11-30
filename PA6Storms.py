@@ -21,3 +21,33 @@ def inputFile():
     return filename  # return the given file name
 
 
+#Purpose: read from the file
+#Paramaters:none
+#Return:list
+ def process_file(filename):
+     try:
+         storm_list1={}
+         file=open(filename,"r")
+         for line in file:
+             line.split(",")
+
+
+
+
+
+Function Name:process_file
+Purpose:To read from the file
+Parameters:filename
+Return:storm list
+Algorithm:
+1.)try
+2.)create an empty list
+3.)open the file that the user inputs
+4.)for every line in the file
+    a.split line at the comma
+    b.append line to the empty list
+5.)close the input file
+6.)except an error
+    a.)output "Sorry File Not Found"
+    b.)end the program
+7.)return the list
