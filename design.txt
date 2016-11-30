@@ -91,10 +91,10 @@ Algorithm:
 3.)open the output file
 4.)for line in file 1
 5.)for line in new file
-    5.)for i in range of the length of storms list
-    a.)if storm _list1[0][0:4] equals storms list2[0][0:4] (the first first four letters in the index to get the year)
+    6.)for i in range of the length of storms list
+    a.)if storm _list1[0][0:4] equals storms list2[0][0:4] ([0][0:4]the first four letters in the index to get the year)
     b.)print storms list[0][0:4] to the file(the storm in the specific year from both files)
-6.)close the output file
+7.)close the output file
 
 
 
@@ -107,3 +107,11 @@ Algorithm:
 1.)for i in list
     a.if storm_list[5] == given_state
 
+
+
+
+
+Function Name:main
+Purpose:run the overall program
+Paramaters:none
+Return:none
