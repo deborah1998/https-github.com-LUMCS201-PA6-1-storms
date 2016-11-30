@@ -40,7 +40,7 @@ def read_file(filename):
 
 
 def main():
-    inputFile()
-    new_file =read_file()
+    filename =inputFile()
+    new_file =read_file(filename)
     print(new_file)
 main()
