@@ -23,7 +23,7 @@ def inputFile():
 
 #Purpose: read from the file
 #Paramaters:filename
-#Return:list
+#Return:storms_list1
 
 def read_file(filename):
     try:
@@ -41,3 +41,5 @@ def read_file(filename):
 
 
 
+
+F
