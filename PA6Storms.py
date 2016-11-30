@@ -26,18 +26,21 @@ def inputFile():
 #Return:list
 
 def read_file(filename):
+    storms_list1 = []
     try:
         inputfile=open(filename,"r")
-        storms_list1=[]
         for line in inputfile:
             storms_list1.append(line.split(","))
         inputfile.close()
     except FileNotFoundError:
         print("Sorry this file is not Found")
         SystemExit(1)
-    return storms_list1
+    print(storms_list1)
 
 
 
-
-
+def main():
+    inputFile()
+    new_file =read_file()
+    print(new_file)
+main()
