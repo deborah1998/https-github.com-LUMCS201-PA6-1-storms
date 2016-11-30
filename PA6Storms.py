@@ -29,7 +29,13 @@ def inputFile():
          storm_list1={}
          file=open(filename,"r")
          for line in file:
-             line.split(",")
+            storm_list1.append(line.split(","))
+     file.close()
+    except FileNotFoundError:
+    print("Sorry File Not Found")
+    return storm_list1
+
+
 
 
 
