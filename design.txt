@@ -101,14 +101,17 @@ Algorithm:
 Function Name:common_storm
 Purpose:What is the most common storm for a particular state?
 Parameters:storm list, given_state
-Return:most common storm
+Return:most max_value
 Algorithm:
-1.)for i in list
-    a.create an empty dictionary (storm_dict)
+1.) create an empty dictionary (storm_dict)
+1.)for each line in list
     a.if storm_list[5] == given_state
-        i. if word is in dictionary:
-            1. add to dictionary with value 1
-    d. return storm_dict
+        i. if storm_list[7] is not in dictionary
+            1.) add to dictionary with value 1
+        b. otherwise
+            1.) add 1 to value of that key
+    b. find max value in dictionary
+    d. return max_value
 
 Function Name:injuries_state
 Purpose:How many injuries in a specific state
