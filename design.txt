@@ -83,9 +83,8 @@ Algorithm:
 Function Name:storm_years
 Purpose:Do more storms happen in some years than others
 Parameters:storm list
-Return:
+Return:none
 Algorithm:
-
 1.)Ask the user for a new file to input
 2.)call the process_file function for the user's new file(read from the new file)
 3.)open the output file
@@ -109,7 +108,6 @@ Algorithm:
     a.if storm_list[5] == given_state
         i. if word is in dictionary:
             1. add to dictionary with value 1
-    c.
     d. return storm_dict
 
 Function Name:injuries_state
@@ -117,23 +115,24 @@ Purpose:How many injuries in a specific state
 Parameters:storm list, given_state
 Return:how many injuries
 Algorithm:
-1.)Ask user or a state
-2.)total_injuries = 0
+1.)total_injuries = 0
 2.) if given_state == storm_list[6]
         a.for i in storm_list:
             i.total_injuries += storm_list[i][8]
-4.)output total_injuries
-
-
+3.)output total_injuries
 
 
 
 Function Name:main
 Purpose:run the overall program
-Paramaters:none
+Parameters:none
 Return:none
 1.)Output the purpose of the program to the user
 2.)call read_file
 3.)call process_file
 4.)Ask the user for the name of the output file
 5.)call storm_years file
+6.)Ask user for a state
+7.)call common_storm file
+8.)Ask user for another state
+7.)call injuries_state file
