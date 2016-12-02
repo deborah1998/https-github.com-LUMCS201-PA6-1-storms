@@ -38,6 +38,58 @@ def read_file(filename):
     return storms_list1
 
 
+#Function Name:storm_graph
+#Purpose:To generate a graph for the storms per month
+#Parameters:storm list
+#Return:graph
+
+def storm_graph(storms_list1):
+import pylab
+x,y = [],[]
+jan_count = 0
+feb_count = 0
+mar_count = 0
+apr_count = 0
+may_count = 0
+jun_count = 0
+jul_count = 0
+aug_count = 0
+sep_count = 0
+oct_count = 0
+nov_count = 0
+dec_count = 0
+for line in storms_list1:
+    if storms_list1[0][4:5] == "01":
+        jan_count += 1
+    if storms_list1[0][4:5] == "02":
+        feb_count += 1
+    if storms_list1[0][4:5] == "03":
+        mar_count += 1
+    if storms_list1[0][4:5] == "04":
+        apr_count += 1
+    if storms_list1[0][4:5] == "05":
+        may_count += 1
+    if storms_list1[0][4:5] == "06":
+        jun_count += 1
+    if storms_list1[0][4:5] == "07":
+        jul_count += 1
+    if storms_list1[0][4:5] == "08":
+        aug_count += 1
+    if storms_list1[0][4:5] == "09":
+        sep_count += 1
+    if storms_list1[0][4:5] == "10":
+        oct_count += 1
+    if storms_list1[0][4:5] == "11":
+        nov_count += 1
+    if storms_list1[0][4:5] == "12":
+        dec_count += 1
+        storms_list1[0][4.5].append
+        storms_list1.append y
+    pylab.ploy (x,y)
+    pylab.ylabel("")
+
+
+
 #Function Name:storm_years
 #Purpose:Do more storms happen in some years than others
 #Parameters:storm list
@@ -46,8 +98,37 @@ def read_file(filename):
 def storm_years():
 
 
+# Function Name:storm_years
+# Purpose:Do more storms happen in some years than others
+# Parameters:storm list
+# Return:none
 
+# Function Name:common_storm
+# Purpose:What is the most common storm for a particular state?
+# Parameters:storm_list, given_state
+# Return:max_value
+def common_storm(storm_list1,given_state):
+    storm_dict = {}
+    for each line in list
+        if storm_list1[5] == given_state:
+            if storm_list1[7] not in storm_dict:
+                storm_dict [storm_list1[7]] = 1
+            otherwise
+            storm_dict[storm_list1[7]] += 1
+b.find max value in dictionary
+d.
+return max_value
 
+# Function Name:injuries_state
+# Purpose:How many injuries in a specific state
+# Parameters:storm_list, given_state
+# Return:how many injuries
+def injuries_in_a_state(given_state, storm_list1):
+    total_injuries = 0
+    if given_state == storm_list1[6]:
+        for i in storm_list1:
+            total_injuries += storm_list1[i][8]
+    return total_injuries
 
 def main():
     filename =inputFile()
