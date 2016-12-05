@@ -62,7 +62,7 @@ for line in storms_list1:
     if storms_list1[0][4:5] == "01":
         jan_count += 1
     if storms_list1[0][4:5] == "02":
-        feb_count += 1
+            feb_count += 1
     if storms_list1[0][4:5] == "03":
         mar_count += 1
     if storms_list1[0][4:5] == "04":
@@ -90,18 +90,34 @@ for line in storms_list1:
 
 
 
+#1.)Ask the user for a new file to input
+#2.)call the process_file function for the user's new file(read from the new file)
+#3.)open the output file
+#4.)for line in file 1
+#5.)for line in new file
+#6.)for i in range of the length of storms list
+#a.)if storm _list1[0][0:4] equals storms list2[0][0:4] ([0][0:4]the first four letters in the index to get the year)
+    #b.)print storms list[0][0:4] to the file(the storm in the specific year from both files)
+#7.)close the output file
+
+
+
+
+
+
+
 #Function Name:storm_years
 #Purpose:Do more storms happen in some years than others
 #Parameters:storm list
 #Return:none
 
 def storm_years():
+    try:
+        new_file2=input("Please enter the name of the new file yould like to input ")
+        storm_list2 =read_file(new_file2)
+        for line in storm_list2
 
 
-# Function Name:storm_years
-# Purpose:Do more storms happen in some years than others
-# Parameters:storm list
-# Return:none
 
 # Function Name:common_storm
 # Purpose:What is the most common storm for a particular state?
