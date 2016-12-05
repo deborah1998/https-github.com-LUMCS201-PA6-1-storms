@@ -102,10 +102,10 @@ def storm_years(storm_list1,given_storm):
       storm_dict={}
       for line in storm_list1:
           if storm_list1[7]==given_storm:
-              if storm_list1[0][0:5] not in storm_dict:
-                storm_dict[storm_list1[0][0:5]]=1
+              if storm_list1[0][0:3] not in storm_dict:
+                storm_dict[storm_list1[0][0:3]]=1
               else:
-                storm_dict[storm_list1[0][0:5]]+=1
+                storm_dict[storm_list1[0][0:3]]+=1
       return storm_dict
 
 
