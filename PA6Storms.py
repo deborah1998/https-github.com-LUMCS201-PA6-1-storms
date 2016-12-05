@@ -98,18 +98,35 @@ def storm_graph(storms_list1):
 #Parameters:storm list
 #Return:none
 
-def storm_years(filename,storms_list):
-    outputfile = open(filename, "w")
-    file_name = inputFile()
-    newfile = read_file(file_name)
-    new_file2=input("Please enter a new file to read from and compare to the original file")
-    read_file(new_file2)
-    for line in newfile:
-        for line in new_file2:
-            for i in range len(storms_list):
-                if storm_list1[0][0:4] == storms_list2[0][0:4]([0][0:4]:
-                    print(stormslist[0][0:4])
-    outputfile.close()
+def storm_years(storm_list1,given_storm):
+      storm_dict={}
+      for line in storm_list1:
+          if storm_list1[7]==given_storm:
+              if storm_list1[0][0:5] not in storm_dict:
+                storm_dict[storm_list1[0][0:5]]=1
+              else:
+                storm_dict[storm_list1[0][0:5]] += 1
+        return storm_dict
+
+
+
+
+
+
+
+def storm_years_comparison():
+
+
+
+
+
+
+
+
+
+#function that counts
+#function that compares
+#function that reads
 
 
     # Function Name:common_storm
