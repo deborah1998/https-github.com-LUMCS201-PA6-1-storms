@@ -44,47 +44,47 @@ def read_file(filename):
 #Return:graph
 
 def storm_graph(storms_list1):
-import pylab
-x,y = [],[]
-jan_count = 0
-feb_count = 0
-mar_count = 0
-apr_count = 0
-may_count = 0
-jun_count = 0
-jul_count = 0
-aug_count = 0
-sep_count = 0
-oct_count = 0
-nov_count = 0
-dec_count = 0
-for line in storms_list1:
-    if storms_list1[0][4:5] == "01":
-        jan_count += 1
-    if storms_list1[0][4:5] == "02":
-        feb_count += 1
-    if storms_list1[0][4:5] == "03":
-        mar_count += 1
-    if storms_list1[0][4:5] == "04":
-        apr_count += 1
-    if storms_list1[0][4:5] == "05":
-        may_count += 1
-    if storms_list1[0][4:5] == "06":
-        jun_count += 1
-    if storms_list1[0][4:5] == "07":
-        jul_count += 1
-    if storms_list1[0][4:5] == "08":
-        aug_count += 1
-    if storms_list1[0][4:5] == "09":
-        sep_count += 1
-    if storms_list1[0][4:5] == "10":
-        oct_count += 1
-    if storms_list1[0][4:5] == "11":
-        nov_count += 1
-    if storms_list1[0][4:5] == "12":
-        dec_count += 1
-        storms_list1[0][4.5].append
-        storms_list1.append y
+    import pylab
+    x,y = [],[]
+    jan_count = 0
+    feb_count = 0
+    mar_count = 0
+    apr_count = 0
+    may_count = 0
+    jun_count = 0
+    jul_count = 0
+    aug_count = 0
+    sep_count = 0
+    oct_count = 0
+    nov_count = 0
+    dec_count = 0
+    for line in storms_list1:
+        if storms_list1[0][4:5] == "01":
+            jan_count += 1
+        if storms_list1[0][4:5] == "02":
+            feb_count += 1
+        if storms_list1[0][4:5] == "03":
+            mar_count += 1
+        if storms_list1[0][4:5] == "04":
+            apr_count += 1
+        if storms_list1[0][4:5] == "05":
+            may_count += 1
+        if storms_list1[0][4:5] == "06":
+            jun_count += 1
+        if storms_list1[0][4:5] == "07":
+            jul_count += 1
+        if storms_list1[0][4:5] == "08":
+            aug_count += 1
+        if storms_list1[0][4:5] == "09":
+            sep_count += 1
+        if storms_list1[0][4:5] == "10":
+            oct_count += 1
+        if storms_list1[0][4:5] == "11":
+            nov_count += 1
+        if storms_list1[0][4:5] == "12":
+            dec_count += 1
+            storms_list1[0][4.5].append
+            storms_list1.append y
     pylab.ploy (x,y)
     pylab.ylabel("")
 
@@ -109,15 +109,14 @@ def storm_years():
 # Return:max_value
 def common_storm(storm_list1,given_state):
     storm_dict = {}
-    for each line in list
+    for line in storm_list1:
         if storm_list1[5] == given_state:
             if storm_list1[7] not in storm_dict:
                 storm_dict [storm_list1[7]] = 1
-            otherwise
+            else:
             storm_dict[storm_list1[7]] += 1
-b.find max value in dictionary
-d.
-return max_value
+        #TODO find max value in dictionary
+    return max_value
 
 # Function Name:injuries_state
 # Purpose:How many injuries in a specific state
