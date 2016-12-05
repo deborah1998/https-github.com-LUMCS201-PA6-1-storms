@@ -85,8 +85,11 @@ def storm_graph(storms_list1):
             dec_count += 1
             storms_list1[0][4.5].append
             storms_list1.append y
-    pylab.ploy (x,y)
+    pylab.ploy(x,y)
     pylab.ylabel("")
+    pylab.xlabel("")
+    pylab.title("")
+    pylab.savefig("")
 
 
 
@@ -114,7 +117,7 @@ def common_storm(storm_list1,given_state):
             if storm_list1[7] not in storm_dict:
                 storm_dict [storm_list1[7]] = 1
             else:
-            storm_dict[storm_list1[7]] += 1
+                storm_dict[storm_list1[7]] += 1
         #TODO find max value in dictionary
     return max_value
 
