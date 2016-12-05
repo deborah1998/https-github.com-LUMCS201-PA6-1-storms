@@ -43,7 +43,7 @@ def read_file(filename):
 #Parameters:storm list
 #Return:graph
 
-def storm_graph(storms_list1):
+def storm_graph(storms_list1): #Shoud be dictionary******
     import pylab
     x,y = [],[]
     jan_count = 0
@@ -83,8 +83,6 @@ def storm_graph(storms_list1):
             nov_count += 1
         if storms_list1[0][4:5] == "12":
             dec_count += 1
-            storms_list1[0][4.5].appendx
-            storms_list1.appendy
     pylab.ploy(x,y)
     pylab.ylabel("")
     pylab.xlabel("")
@@ -94,11 +92,11 @@ def storm_graph(storms_list1):
 
 
 #Function Name:storm_years
-#Purpose:Do more storms happe-n in some years than others
+#Purpose:Do more storms happen in some years than others
 #Parameters:storm list
 #Return:none
 
-def storm_years(filename,storms_list):
+def storm_years(filename,storms_list1):
     outputfile = open(filename, "w")
     file_name = inputFile()
     newfile = read_file(file_name)
@@ -106,34 +104,40 @@ def storm_years(filename,storms_list):
     read_file(new_file2)
     for line in newfile:
         for line in new_file2:
-            for i in range len(storms_list):
+            for i in range len(storms_list1):
                 if storm_list1[0][0:4] == storms_list2[0][0:4]([0][0:4]:
                     print(stormslist[0][0:4])
     outputfile.close()
 
 
-    # Function Name:common_storm
-# Purpose:What is the most common storm for a particular state?
-# Parameters:storm_list, given_state
-# Return:max_value
+# Function Name:common_storm
+# Purpose:What is the most common storm for a particular state?  **Line is not the variable - find out what you're looking for
+# Parameters:storm_list, given_state **** If everything else works, make print(line) and see what comes out
+# Return:storm_dict
 def common_storm(storm_list1,given_state):
     storm_dict = {}
     for line in storm_list1:
         if storm_list1[5] == given_state:
             if storm_list1[7] not in storm_dict:
-                storm_dict [storm_list1[7]] = 1
+                storm_dict[storm_list1[7]] = 1
             else:
                 storm_dict[storm_list1[7]] += 1
-        #TODO find max value in dictionary
-    return max_value
+    return storm_dict
+
+# Function Name:common_storm_max
+# Purpose:Find the max value in a dictionary  #Should use a loop in the dictionary - same way as lists******
+# Parameters:storm_dict
+# Return:max_value
+def common_storm_max():
+
 
 # Function Name:injuries_state
 # Purpose:How many injuries in a specific state
-# Parameters:storm_list, given_state
+# Parameters:storm_list, given_state2
 # Return:how many injuries
-def injuries_in_a_state(given_state, storm_list1):
+def injuries_in_a_state(given_state2, storm_list1):
     total_injuries = 0
-    if given_state == storm_list1[6]:
+    if given_state2 == storm_list1[6]:
         for i in storm_list1:
             total_injuries += storm_list1[i][8]
     return total_injuries
