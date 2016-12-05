@@ -142,7 +142,7 @@ def common_storm(storm_list1,given_state):
     return storm_dict
 
 # Function Name:common_storm_max
-# Purpose:Find the max value in a dictionary  #Should use a loop in the dictionary - same way as lists******
+# Purpose:Find the max value in a dictionary  #Should use a loop in the dictionary - same way as lists****** Do thiis
 # Parameters:storm_dict
 # Return:max_value
 def common_storm_max():
