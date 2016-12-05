@@ -83,8 +83,8 @@ def storm_graph(storms_list1):
             nov_count += 1
         if storms_list1[0][4:5] == "12":
             dec_count += 1
-            storms_list1[0][4.5].append
-            storms_list1.append y
+            storms_list1[0][4.5].appendx
+            storms_list1.appendy
     pylab.ploy(x,y)
     pylab.ylabel("")
     pylab.xlabel("")
@@ -94,19 +94,25 @@ def storm_graph(storms_list1):
 
 
 #Function Name:storm_years
-#Purpose:Do more storms happen in some years than others
+#Purpose:Do more storms happe-n in some years than others
 #Parameters:storm list
 #Return:none
 
-def storm_years():
+def storm_years(filename,storms_list):
+    outputfile = open(filename, "w")
+    file_name = inputFile()
+    newfile = read_file(file_name)
+    new_file2=input("Please enter a new file to read from and compare to the original file")
+    read_file(new_file2)
+    for line in newfile:
+        for line in new_file2:
+            for i in range len(storms_list):
+                if storm_list1[0][0:4] == storms_list2[0][0:4]([0][0:4]:
+                    print(stormslist[0][0:4])
+    outputfile.close()
 
 
-# Function Name:storm_years
-# Purpose:Do more storms happen in some years than others
-# Parameters:storm list
-# Return:none
-
-# Function Name:common_storm
+    # Function Name:common_storm
 # Purpose:What is the most common storm for a particular state?
 # Parameters:storm_list, given_state
 # Return:max_value

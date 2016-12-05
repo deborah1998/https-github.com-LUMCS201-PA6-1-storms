@@ -5,7 +5,8 @@ PA6 Design Grade
 
 5/5 List of functions and their details makes sense
 * extra question is fine
-* I didn't look at your algorithms since they weren't part of what you needed to turn in. Feel free to ask if you have questions about a particular one.
+* I didn't look at your algorithms since they weren't part of what you needed to turn in.
+Feel free to ask if you have questions about a particular one.
 * make sure 
 
 5/5 Python file reads from file and stores correctly
