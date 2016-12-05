@@ -105,8 +105,8 @@ def storm_years(storm_list1,given_storm):
               if storm_list1[0][0:5] not in storm_dict:
                 storm_dict[storm_list1[0][0:5]]=1
               else:
-                storm_dict[storm_list1[0][0:5]] += 1
-        return storm_dict
+                storm_dict[storm_list1[0][0:5]]+=1
+      return storm_dict
 
 
 
