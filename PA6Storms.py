@@ -43,46 +43,23 @@ def read_file(filename):
 #Parameters:storm list
 #Return:graph
 
-def storm_graph(storms_list1): #Shoud be dictionary******
+def storm_dict(storms_list1): #Shoud be dictionary******
     import pylab
     x,y = [],[]
-    jan_count = 0
-    feb_count = 0
-    mar_count = 0
-    apr_count = 0
-    may_count = 0
-    jun_count = 0
-    jul_count = 0
-    aug_count = 0
-    sep_count = 0
-    oct_count = 0
-    nov_count = 0
-    dec_count = 0
-    for line in storms_list1:
-        if storms_list1[0][4:5] == "01":
-            jan_count += 1
-        if storms_list1[0][4:5] == "02":
-            feb_count += 1
-        if storms_list1[0][4:5] == "03":
-            mar_count += 1
-        if storms_list1[0][4:5] == "04":
-            apr_count += 1
-        if storms_list1[0][4:5] == "05":
-            may_count += 1
-        if storms_list1[0][4:5] == "06":
-            jun_count += 1
-        if storms_list1[0][4:5] == "07":
-            jul_count += 1
-        if storms_list1[0][4:5] == "08":
-            aug_count += 1
-        if storms_list1[0][4:5] == "09":
-            sep_count += 1
-        if storms_list1[0][4:5] == "10":
-            oct_count += 1
-        if storms_list1[0][4:5] == "11":
-            nov_count += 1
-        if storms_list1[0][4:5] == "12":
-            dec_count += 1
+    graph_dict = {}
+    for word in storms_list1:
+        if storms_list1[0][4:5] not in graph_dict:
+            graph_dict = 1
+        else:
+            graph_dict += 1
+    return graph_dict
+
+# Function Name:storm_graph
+# Purpose:To generate a graph for the storms per month
+# Parameters:storm list
+# Return:graph
+def storm_list
+
     pylab.ploy(x,y)
     pylab.ylabel("")
     pylab.xlabel("")
