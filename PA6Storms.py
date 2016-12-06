@@ -44,9 +44,8 @@ def read_file(filename):
 #Parameters:storm list
 #Return:graph
 
-def storm_dict(storms_list1): #Shoud be dictionary******
+def storm_graph(storms_list1): #Shoud be dictionary******
     import pylab
-    x,y = [],[]
     graph_dict = {}
     for word in storms_list1:
         if storms_list1[0][4:5] not in graph_dict:
@@ -59,7 +58,9 @@ def storm_dict(storms_list1): #Shoud be dictionary******
 # Purpose:To generate a graph for the storms per month
 # Parameters:storm list
 # Return:graph
-def storm_list
+def storm_list():
+    x,y = []
+
 
     pylab.ploy(x,y)
     pylab.ylabel("")
