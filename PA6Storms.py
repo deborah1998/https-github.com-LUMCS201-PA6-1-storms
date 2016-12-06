@@ -12,8 +12,9 @@
 # Purpose: Ask the user for a filename
 # Parameters: none
 # Return: filename
+
+import os
 def inputFile():
-    import os
     filename = input("Please input a file to read from.")
     # create a loop to error check
     while not os.path.exists(filename):
@@ -87,15 +88,17 @@ def storm_years(storm_list1,given_storm):
 
 
 
-
-
-
-
-def storm_years_comparison():
-
-
-
-
+def storm_years_secondfile(storm_list2,given_storm):
+    file2=input("Please enter another file you would like to input and compare to the orginal file")
+    read_file(file2)
+    storm_dict={}
+    for line in storm_list2:
+        if storm_list2[7] == given_storm:
+            if storm_list2[0][0:3] not in storm_dict:
+                storm_dict[storm_list2[0][0:3]] = 1
+            else:
+                storm_dict[storm_list2[0][0:3]] += 1
+    return storm_dict
 
 
 
