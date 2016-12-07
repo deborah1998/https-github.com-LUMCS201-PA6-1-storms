@@ -77,7 +77,7 @@ def storm_list():
 
 def storm_years(storm_list1,given_storm):
       storm_dict={}
-      for line in storm_list1:
+      for storm_dict in storm_list1:
           if storm_list1[7]==given_storm:
               if storm_list1[0][0:3] not in storm_dict:
                 storm_dict[storm_list1[0][0:3]]=1
@@ -93,7 +93,7 @@ def storm_years_secondfile(storm_list2,given_storm):
     file2=input("Please enter another file you would like to input and compare to the orginal file")
     read_file(file2)
     storm_dict={}
-    for line in storm_list2:
+    for storm_dict in storm_list2:
         if storm_list2[7] == given_storm:
             if storm_list2[0][0:3] not in storm_dict:
                 storm_dict[storm_list2[0][0:3]] = 1
@@ -126,7 +126,7 @@ def comparison_of_years(outfile_name,stormfile1,stormfile2):
 # Return:storm_dict
 def common_storm(storm_list1,given_state):
     storm_dict = {}
-    for line in storm_list1:
+    for storm_dict in storm_list1:
         if storm_list1[5] == given_state:
             if storm_list1[7] not in storm_dict:
                 storm_dict[storm_list1[7]] = 1
@@ -154,8 +154,8 @@ def injuries_in_a_state(given_state2, storm_list1):
 
 
 def menu():
-    print("The choices you have to choose from to learn more about storms are what storms that happened in a certain year,"+
-          " how many injuries from storms in a specific state,")
+    print("The choices you have to choose from to learn more about storms are most  common storms that happened in a certain year,"+
+          " how many injuries from storms in a specific state,most common storms that happened in a particular state ")
     choice = input("What would you like to know about storms?")
     return choice
 
