@@ -141,8 +141,8 @@ def common_storm_max(storm_dict):
 # Return:how many injuries
 def injuries_in_a_state(given_state2, storm_list1):
     total_injuries = 0
-    if given_state2 == storm_list1[6]:
-        for i in storm_list1:
+    for i in storm_list1:
+        if given_state2 == storm_list1[6]:
             total_injuries += storm_list1[i][8]
     return total_injuries
 
