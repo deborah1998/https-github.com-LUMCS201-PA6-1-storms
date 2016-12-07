@@ -99,10 +99,12 @@ def storm_years_secondfile(given_storm):
 # Parameters:
 # Return:
 
-def comparison_of_years(outfile_name,stormfile1,stormfile2):
+def comparison_of_years(outfile_name,dict_1,dict_2):
     outputfile=open (outfile_name,"w")
-    for line in stormfile1 and stormfile2:
-            if stormfile1[0][0:3] == stormfile2[0][0:3]:
+    for line in dict_1:
+        if dict_1[line]==dict_2[line]:
+            print
+            if stormfile1[0][0:3]== stormfile2[0][0:3]:
                 print(line[0][0:3], file =outputfile)
     outputfile.close()
 
@@ -115,12 +117,12 @@ def comparison_of_years(outfile_name,stormfile1,stormfile2):
 # Return:storm_dict
 def common_storm(storm_list1,given_state):
     storm_dict = {}
-    for storm_dict in storm_list1:
-        if storm_list1[5] == given_state:
-            if storm_list1[7] not in storm_dict:
-                storm_dict[storm_list1[7]] = 1
+    for line in storm_list1:
+        if line[5] == given_state:
+            if line[7] not in storm_dict:
+                storm_dict[line[7]] = 1
             else:
-                storm_dict[storm_list1[7]] += 1
+                storm_dict[line[7]] += 1
     return storm_dict
 
 # Function Name:common_storm_max
