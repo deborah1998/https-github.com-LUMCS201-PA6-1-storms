@@ -75,7 +75,7 @@ def storm_graph(graph_dict):
 # Purpose:Do more storms happen in some years than others
 # Parameters:storm list
 # Return:none
-# This is right do not change
+
 
 def storm_years(storm_list1):
     storm_dict={}
@@ -103,7 +103,7 @@ def comparison_of_years(outfile_name,dict_1,dict_2):
     outputfile=open (outfile_name,"w")
     for key in dict_1.keys():
         if key in dict_2.keys():
-            print(dict_1[key]-dict_2[key])
+            print(dict_1[key]-dict_2[key],file=outputfile)
     outputfile.close()
 
 
@@ -130,8 +130,8 @@ def common_storm(storm_list1,given_state):
 def common_storm_max(storm_dict):
     biggest_value = 0
     for key in storm_dict:
-        if storm_dict[1] > biggest_value:
-            biggest_value = storm_dict[1]
+        if int(key[1]) > biggest_value:
+            biggest_value = int(key[1])
     return biggest_value
 
 
@@ -156,5 +156,6 @@ def menu():
 def main():
     filename = inputFile()
     new_file = read_file(filename)
+    print(common_storm_max(new_file))
 
 main()
