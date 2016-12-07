@@ -101,7 +101,7 @@ def storm_years_secondfile(given_storm):
 
 def comparison_of_years(outfile_name,dict_1,dict_2):
     outputfile=open (outfile_name,"w")
-    for key in dict_1.keys():
+    for key in dict_1:
         if key in dict_2:
             print(dict_1[key]-dict_2[key],file=outputfile)
     outputfile.close()
@@ -169,7 +169,7 @@ def main():
     if choice == "C":
         given_state2 = input("Please input a state.")
         injuries =injuries_in_a_state(given_state2, new_file)
-        print("The total injries in this state are",injuries)
+        print("The total injuries in this state are",injuries)
     if choice == "D":
         given_state = input("Please input a state.")
         common_storm(new_file, given_state)
