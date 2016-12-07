@@ -168,11 +168,12 @@ def main():
         comparison_of_years(outfile_name, stormdict_1,stormdict_2)
     if choice == "C":
         given_state2 = input("Please input a state.")
-        injuries_in_a_state(given_state2, new_file)
+        injuries =injuries_in_a_state(given_state2, new_file)
+        print("The total injries in this state are",injuries)
     if choice == "D":
         given_state = input("Please input a state.")
         common_storm(new_file, given_state)
         common_storm_max(new_file)
-    print("The storm with the highest number of occurrences, occurred",common_storm_max(new_file),"times.")
-    user_state=("Pkeas")
+        print("The storm with the highest number of occurrences, occurred",common_storm_max(new_file),"times.")
+
 main()
