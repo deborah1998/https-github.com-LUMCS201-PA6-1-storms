@@ -79,30 +79,24 @@ def storm_graph(output_file):
 #Purpose:Do more storms happen in some years than others
 #Parameters:storm list
 #Return:none
+#This is right do on
 
-def storm_years(storm_list1,given_storm):
-      storm_dict={}
-      for storm_dict in storm_list1:
-          if storm_list1[7]==given_storm:
-              if storm_list1[0][0:3] not in storm_dict:
-                storm_dict[storm_list1[0][0:3]]=1
-              else:
-                storm_dict[storm_list1[0][0:3]]+=1
-      return storm_dict
-
-
-
-def storm_years_secondfile(storm_list2,given_storm):
-    file2=input("Please enter another file you would like to input and compare to the orginal file")
-    read_file(file2)
+def storm_years(storm_list1):
     storm_dict={}
-    for storm_dict in storm_list2:
-        if storm_list2[7] == given_storm:
-            if storm_list2[0][0:3] not in storm_dict:
-                storm_dict[storm_list2[0][0:3]] = 1
-            else:
-                storm_dict[storm_list2[0][0:3]] += 1
+    for line in storm_list1:
+        if line[7] not in storm_dict:
+            storm_dict[line[7]]=1
+        else:
+            storm_dict[line[7]]+=1
     return storm_dict
+
+
+
+def storm_years_secondfile(given_storm):
+    file2=input("Please enter another file you would like to input and compare to the original file")
+    new_file=read_file(file2)
+    storm_years(new_file)
+
 
 
 
@@ -167,8 +161,5 @@ def menu():
 def main():
     filename =inputFile()
     new_file =read_file(filename)
-    print(new_file)
-    choice = menu()
-    if choice ==
-
+    storm_years(new_file)
 main()
