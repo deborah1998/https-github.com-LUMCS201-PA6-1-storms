@@ -103,11 +103,19 @@ def storm_years_secondfile(storm_list2,given_storm):
 
 
 
+# Function Name:comparison_of_years
+# Purpose:
+# Parameters:
+# Return:
 
 
-#function that counts
-#function that compares
-#function that reads
+
+def comparison_of_years(stormfile1,stormfile2):
+    for line in stormfile1 and stormfile2:
+            if stormfile1[0][0:3]== stormfile2[0][0:3]:
+                print(line)
+
+
 
 
 # Function Name:common_storm
@@ -141,6 +149,13 @@ def injuries_in_a_state(given_state2, storm_list1):
         for i in storm_list1:
             total_injuries += storm_list1[i][8]
     return total_injuries
+
+
+def menu():
+    print("The choices you have to choose from to learn more about storms are what storms that happened in a certain year,"+
+          " how many injuries from storms in a specific state,")
+    choice = input("What would you like to know about storms?")
+    return choice
 
 def main():
     filename =inputFile()
