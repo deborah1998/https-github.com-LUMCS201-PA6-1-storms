@@ -156,6 +156,7 @@ def menu():
 def main():
     filename = inputFile()
     new_file = read_file(filename)
+    choice = menu()
     if choice == "A":
         graph_dict =storm_graph_dict(new_file)
         storm_graph(graph_dict)
@@ -171,7 +172,7 @@ def main():
         given_state = input("Please input a state.")
         common_storm(storm_list1, given_state)
         common_storm_max(storm_dict)
-    print("The storm with the highest number of occurances, occurred",common_storm_max(new_file),"times.")
+    print("The storm with the highest number of occurrences, occurred",common_storm_max(new_file),"times.")
 
     print(common_storm_max(new_file))
     user_state=("Ple")
