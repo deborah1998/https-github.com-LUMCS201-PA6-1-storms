@@ -102,7 +102,7 @@ def storm_years_secondfile(given_storm):
 def comparison_of_years(outfile_name,dict_1,dict_2):
     outputfile=open (outfile_name,"w")
     for key in dict_1.keys():
-        if key in dict_2.keys():
+        if key in dict_2:
             print(dict_1[key]-dict_2[key],file=outputfile)
     outputfile.close()
 
@@ -161,19 +161,18 @@ def main():
         graph_dict =storm_graph_dict(new_file)
         storm_graph(graph_dict)
     if choice == "B":
+        stormdict_1= storm_years(new_file)
         given_storm = input("Please enter a storm type in which you would like to find the year it occurred.")
-        storm_years_secondfile(given_storm)
+        stormdict_2= storm_years_secondfile(given_storm)
         outfile_name = input("Please enter the name of an output file.")
-        comparison_of_years(outfile_name, dict_1, dict_2)
+        comparison_of_years(outfile_name, stormdict_1,stormdict_2)
     if choice == "C":
         given_state2 = input("Please input a state.")
-        injuries_in_a_state(given_state2, storm_list1)
+        injuries_in_a_state(given_state2, new_file)
     if choice == "D":
         given_state = input("Please input a state.")
-        common_storm(storm_list1, given_state)
-        common_storm_max(storm_dict)
+        common_storm(new_file, given_state)
+        common_storm_max(new_file)
     print("The storm with the highest number of occurrences, occurred",common_storm_max(new_file),"times.")
-
-    print(common_storm_max(new_file))
-    user_state=("Ple")
+    user_state=("Pkeas")
 main()
