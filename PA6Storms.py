@@ -6,7 +6,7 @@
 # Data In: input file name, output file name,
 # Data Out:  specified storm information based on user input
 # Other files needed: Stormdata_2000_shortened.csv,Stormdata_2001_shortened.csv,Stormdata_2002_shortened.csv,Stormdata_2003_shortened.csv
-#Stormdata_2004_shortened.csv,Stormdata_2009_shortened.csv,Stormdata_2011_shortened.csv,Stormdata_2012_shortened.csv,Stormdata_2013_shortened.csv
+# Stormdata_2004_shortened.csv,Stormdata_2009_shortened.csv,Stormdata_2011_shortened.csv,Stormdata_2012_shortened.csv,Stormdata_2013_shortened.csv
 # Credits: None
 
 # Purpose: Ask the user for a filename
@@ -24,9 +24,9 @@ def inputFile():
     return filename  # return the given file name
 
 
-#Purpose: read from the file
-#Paramaters:filename
-#Return:list
+# Purpose: read from the file
+# Paramaters:filename
+# Return:list
 
 def read_file(filename):
     storms_list1 = []
@@ -41,12 +41,12 @@ def read_file(filename):
     return storms_list1
 
 
-#Function Name:storm_graph
-#Purpose:To generate a graph for the storms per month
-#Parameters:storm list
-#Return:graph
+# Function Name:storm_graph
+# Purpose:To generate a graph for the storms per month
+# Parameters:storm list
+# Return:graph
 
-def storm_graph_dict(storms_list1): #Shoud be dictionary******
+def storm_graph_dict(storms_list1): # Shoud be dictionary******
     import pylab
     graph_dict = {}
     for graph_dict in storms_list1:
@@ -56,39 +56,34 @@ def storm_graph_dict(storms_list1): #Shoud be dictionary******
             graph_dict += 1
     return graph_dict
 
+
 # Function Name:storm_graph
 # Purpose:To generate a graph for the storms per month
 # Parameters:storm list
 # Return:graph
-def storm_graph(output_file):
-    fp = open(output_file)
-    x,y = [],[]
-    for line in fp:
-        line_list = line.strip().split()
-        x.append(int(line_list[0]))
-        y.append(int(line_list[1]))
-    fp.close()
+def storm_graph(graph_dict):
+    keys_list = graph_dict.keys()
+    values_list = graph_dict.values()
 
-    pylab.ploy(x,y)
+    pylab.ploy(keys_list,values_list)
     pylab.ylabel("Number of Storms")
     pylab.xlabel("Month")
     pylab.title("Number of Storms per month")
-    pylab.savefig(output_file)
 
 
-#Function Name:storm_years
-#Purpose:Do more storms happen in some years than others
-#Parameters:storm list
-#Return:none
-#This is right do not change
+# Function Name:storm_years
+# Purpose:Do more storms happen in some years than others
+# Parameters:storm list
+# Return:none
+# This is right do not change
 
 def storm_years(storm_list1):
     storm_dict={}
     for line in storm_list1:
         if line[7] not in storm_dict:
-            storm_dict[line[7]]=1
+            storm_dict[line[7]] = 1
         else:
-            storm_dict[line[7]]+=1
+            storm_dict[line[7]] += 1
     return storm_dict
 
 
@@ -129,12 +124,12 @@ def common_storm(storm_list1,given_state):
     return storm_dict
 
 # Function Name:common_storm_max
-# Purpose:Find the max value in a dictionary  #Should use a loop in the dictionary - same way as lists****** Do this
+# Purpose:Find the max value in a dictionary
 # Parameters:storm_dict
 # Return:max_value
 def common_storm_max(storm_dict):
+    biggest_value = 0
     for key in storm_dict:
-        biggest_value = 0
         if storm_dict[1] > biggest_value:
             biggest_value = storm_dict[1]
     return biggest_value
@@ -159,7 +154,7 @@ def menu():
     return choice
 
 def main():
-    filename =inputFile()
-    new_file =read_file(filename)
+    filename = inputFile()
+    new_file = read_file(filename)
 
 main()
