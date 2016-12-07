@@ -106,11 +106,9 @@ def storm_years_secondfile(given_storm):
 
 def comparison_of_years(outfile_name,dict_1,dict_2):
     outputfile=open (outfile_name,"w")
-    for line in dict_1:
-        if dict_1[line]==dict_2[line]:
-            print
-            if stormfile1[0][0:3]== stormfile2[0][0:3]:
-                print(line[0][0:3], file =outputfile)
+    for key in dict_1.keys():
+        if key in dict_2.keys():
+            print(dict_1[key]-dict_2[key])
     outputfile.close()
 
 
