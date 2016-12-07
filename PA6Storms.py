@@ -110,10 +110,12 @@ def storm_years_secondfile(storm_list2,given_storm):
 
 
 
-def comparison_of_years(stormfile1,stormfile2):
+def comparison_of_years(outfile_name,stormfile1,stormfile2):
+    outputfile=open (outfile_name,"w")
     for line in stormfile1 and stormfile2:
             if stormfile1[0][0:3]== stormfile2[0][0:3]:
-                print(line)
+                print(line[0][0:3], file =outputfile)
+    outputfile.close()
 
 
 
