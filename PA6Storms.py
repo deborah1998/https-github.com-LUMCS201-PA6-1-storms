@@ -163,4 +163,6 @@ def main():
     filename =inputFile()
     new_file =read_file(filename)
     print(new_file)
+    choice = menu()
+
 main()
