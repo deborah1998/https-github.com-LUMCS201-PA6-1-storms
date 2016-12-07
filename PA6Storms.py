@@ -14,6 +14,8 @@
 # Return: filename
 
 import os
+
+
 def inputFile():
     filename = input("Please input a file to read from.")
     # create a loop to error check
@@ -44,16 +46,15 @@ def read_file(filename):
 #Parameters:storm list
 #Return:graph
 
-def storm_dict(storms_list1,graph_output_file): #Shoud be dictionary******
+def storm_graph_dict(storms_list1): #Shoud be dictionary******
     import pylab
-    output_file = open(graph_output_file)
     graph_dict = {}
     for graph_dict in storms_list1:
         if storms_list1[0][4:5] not in graph_dict:
             graph_dict = 1
         else:
             graph_dict += 1
-    print(graph_dict,file=output_file)
+    return graph_dict
 
 # Function Name:storm_graph
 # Purpose:To generate a graph for the storms per month
@@ -93,7 +94,7 @@ def storm_years(storm_list1,given_storm):
 
 
 def storm_years_secondfile(storm_list2,given_storm):
-    file2=input("Please enter another file you would like to input and compare to the orginal file")
+    file2=input("Please enter another file you would like to input and compare to the original file")
     read_file(file2)
     storm_dict={}
     for storm_dict in storm_list2:
@@ -125,6 +126,7 @@ def comparison_of_years(outfile_name,stormfile1,stormfile2):
 # Purpose:What is the most common storm for a particular state?  **Line is not the variable - find out what you're looking for
 # Parameters:storm_list, given_state **** If everything else works, make print(line) and see what comes out
 # Return:storm_dict
+
 def common_storm(storm_list1,given_state):
     storm_dict = {}
     for storm_dict in storm_list1:
@@ -136,14 +138,15 @@ def common_storm(storm_list1,given_state):
     return storm_dict
 
 # Function Name:common_storm_max
-# Purpose:Find the max value in a dictionary  #Should use a loop in the dictionary - same way as lists****** Do thiis
+# Purpose:Find the max value in a dictionary  #Should use a loop in the dictionary - same way as lists****** Do this
 # Parameters:storm_dict
 # Return:max_value
 def common_storm_max(storm_dict):
-    for line in storm_dict:
-        if value > biggest_value:
-            biggest_value = value
-    return biggest_value.key
+    for key in storm_dict:
+        biggest_value = 0
+        if storm_dict[1] > biggest_value:
+            biggest_value = storm_dict[1]
+    return biggest_value
 
 
 # Function Name:injuries_state
