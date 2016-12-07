@@ -80,7 +80,7 @@ def storm_graph(output_file):
 #Purpose:Do more storms happen in some years than others
 #Parameters:storm list
 #Return:none
-#This is right do on
+#This is right do not change
 
 def storm_years(storm_list1):
     storm_dict={}
@@ -97,8 +97,6 @@ def storm_years_secondfile(given_storm):
     file2=input("Please enter another file you would like to input and compare to the original file")
     new_file=read_file(file2)
     storm_years(new_file)
-
-
 
 
 # Function Name:comparison_of_years
@@ -163,5 +161,5 @@ def menu():
 def main():
     filename =inputFile()
     new_file =read_file(filename)
-    storm_years(new_file)
+
 main()
