@@ -92,8 +92,6 @@ def storm_years(storm_list1,given_storm):
 
 
 
-
-
 def storm_years_secondfile(storm_list2,given_storm):
     file2=input("Please enter another file you would like to input and compare to the orginal file")
     read_file(file2)
