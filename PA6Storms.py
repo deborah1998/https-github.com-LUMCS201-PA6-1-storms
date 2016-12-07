@@ -44,30 +44,35 @@ def read_file(filename):
 #Parameters:storm list
 #Return:graph
 
-def storm_graph(storms_list1): #Shoud be dictionary******
+def storm_dict(storms_list1,graph_output_file): #Shoud be dictionary******
     import pylab
+    output_file = open(graph_output_file)
     graph_dict = {}
-    for word in storms_list1:
+    for graph_dict in storms_list1:
         if storms_list1[0][4:5] not in graph_dict:
             graph_dict = 1
         else:
             graph_dict += 1
-    return graph_dict
+    print(graph_dict,file=output_file)
 
 # Function Name:storm_graph
 # Purpose:To generate a graph for the storms per month
 # Parameters:storm list
 # Return:graph
-def storm_list():
-    x,y = []
-
+def storm_graph(output_file):
+    fp = open(output_file)
+    x,y = [],[]
+    for line in fp:
+        line_list = line.strip().split()
+        x.append(int(line_list[0]))
+        y.append(int(line_list[1]))
+    fp.close()
 
     pylab.ploy(x,y)
-    pylab.ylabel("")
-    pylab.xlabel("")
-    pylab.title("")
-    pylab.savefig("")
-
+    pylab.ylabel("Number of Storms")
+    pylab.xlabel("Month")
+    pylab.title("Number of Storms per month")
+    pylab.savefig(output_file)
 
 
 #Function Name:storm_years
@@ -108,8 +113,6 @@ def storm_years_secondfile(storm_list2,given_storm):
 # Parameters:
 # Return:
 
-
-
 def comparison_of_years(outfile_name,stormfile1,stormfile2):
     outputfile=open (outfile_name,"w")
     for line in stormfile1 and stormfile2:
@@ -138,7 +141,11 @@ def common_storm(storm_list1,given_state):
 # Purpose:Find the max value in a dictionary  #Should use a loop in the dictionary - same way as lists****** Do thiis
 # Parameters:storm_dict
 # Return:max_value
-def common_storm_max():
+def common_storm_max(storm_dict):
+    for line in storm_dict:
+        if value > biggest_value:
+            biggest_value = value
+    return biggest_value.key
 
 
 # Function Name:injuries_state
