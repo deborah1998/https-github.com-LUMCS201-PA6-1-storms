@@ -171,6 +171,8 @@ def menu():
 
 
 def main():
+    print("This program will determine what storms occur in a particular state,most common storms that occur in a certain year, how many injuries from storms "+
+          "in a specific state "+"most common storms that happened in a particular state")
     filename = inputFile()
     new_file = read_file(filename)
     choice = menu()
