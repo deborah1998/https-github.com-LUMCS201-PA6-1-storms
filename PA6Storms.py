@@ -72,9 +72,9 @@ def storm_graph(graph_dict):
 
 
 # Function Name:storm_years
-# Purpose:Do more storms happen in some years than others
-# Parameters:storm list
-# Return:none
+# Purpose:determine what storms happen in some years than others (add storm types to dictionary)
+# Parameters:storm_list1
+# Return:storm_dictionary
 
 
 def storm_years(storm_list1):
@@ -86,6 +86,10 @@ def storm_years(storm_list1):
             storm_dict[line[7]] += 1
     return storm_dict
 
+# Function Name:storm_years_secondfile()
+# Purpose:determine what storms happen in the second file based on user input
+# Parameters:none
+# Return:none
 
 
 def storm_years_secondfile():
@@ -96,11 +100,11 @@ def storm_years_secondfile():
 
 
 # Function Name:comparison_of_years
-# Purpose:
-# Parameters:
-# Return:
+# Purpose:compare two dictionaries and output how many more  storms of a certain type happen in a certaiyear
+# Parameters:filename,dict_1,dict_2,outfile_name
+# Return:none
 
-def comparison_of_years(filename,dict_1,dict_2,outfile_name,):
+def comparison_of_years(filename,dict_1,dict_2,outfile_name):
     inputfile=open(filename,"r")
     outputfile=open (outfile_name,"w")
     for key in dict_1:
@@ -156,6 +160,13 @@ def menu():
     choice = input("What would you like to know about storms?")
     return choice
 
+
+# Function Name:main
+# Purpose:run the overall program
+# Parameters:none
+# Return:none
+
+
 def main():
     filename = inputFile()
     new_file = read_file(filename)
@@ -166,10 +177,10 @@ def main():
     if choice == "B":
         stormdict_1= storm_years(new_file)
         given_storm = input("Please enter a storm type in which you would like to find the year it occurred.")
-        stormdict_2= storm_years_secondfile()
+        stormdict_2= storm_years_secondfile(given_storm)
         outfile_name = input("Please enter the name of an output file.")
-        bleh=comparison_of_years(filename,stormdict_1,stormdict_2,outfile_name)
-        print(bleh)
+        comparison_of_years(filename,stormdict_1,stormdict_2,outfile_name)
+
 
     if choice == "C":
         given_state2 = input("Please input a state.")
