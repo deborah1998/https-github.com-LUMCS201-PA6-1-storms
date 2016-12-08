@@ -1,7 +1,7 @@
 # Programmers:  Holly and Deb
 # Course:  CS201.01, Dr. Olsen
 # Date: November 30, 2016
-# Programming Assignment:  PA6
+# Programming Assignment: PA6
 # Problem Statement:
 # Data In: input file name, output file name,
 # Data Out:  specified storm information based on user input
