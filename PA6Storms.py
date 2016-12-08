@@ -99,11 +99,13 @@ def storm_years_secondfile(given_storm):
 # Parameters:
 # Return:
 
-def comparison_of_years(outfile_name,dict_1,dict_2):
+def comparison_of_years(outfile_name,filename,dict_1,dict_2):
+    inputfile=open(filename,"r")
     outputfile=open (outfile_name,"w")
     for key in dict_1:
         if key in dict_2:
             print(dict_1[key]-dict_2[key],file=outputfile)
+    inputfile.close()
     outputfile.close()
 
 
@@ -165,7 +167,7 @@ def main():
         given_storm = input("Please enter a storm type in which you would like to find the year it occurred.")
         stormdict_2= storm_years_secondfile(given_storm)
         outfile_name = input("Please enter the name of an output file.")
-        comparison_of_years(outfile_name, stormdict_1,stormdict_2)
+        comparison_of_years(outfile_name,filename,stormdict_1,stormdict_2)
     if choice == "C":
         given_state2 = input("Please input a state.")
         injuries =injuries_in_a_state(given_state2, new_file)
