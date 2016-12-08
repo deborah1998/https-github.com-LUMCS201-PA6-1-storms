@@ -37,7 +37,7 @@ def read_file(filename):
         inputfile.close()
     except FileNotFoundError:
         print("Sorry this file is not Found")
-        SystemExit(1)
+    SystemExit(1)
     return storms_list1
 
 
@@ -103,7 +103,7 @@ def comparison_of_years(outfile_name,filename,dict_1,dict_2):
     inputfile=open(filename,"r")
     outputfile=open (outfile_name,"w")
     for key in dict_1:
-        if key in dict_2:
+        if key == dict_2:
             print(dict_1[key]-dict_2[key],file=outputfile)
     inputfile.close()
     outputfile.close()
