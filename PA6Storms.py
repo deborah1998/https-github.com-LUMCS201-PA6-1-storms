@@ -2,7 +2,7 @@
 # Course:  CS201.01, Dr. Olsen
 # Date: November 30, 2016
 # Programming Assignment:  PA6
-# Problem Statement:
+# Problem Statement: To solve problems chosen by the user having to do with files on storms over years.
 # Data In: input file name, output file name,
 # Data Out:  specified storm information based on user input
 # Other files needed: Stormdata_2000_shortened.csv,Stormdata_2001_shortened.csv,Stormdata_2002_shortened.csv,Stormdata_2003_shortened.csv
@@ -143,17 +143,23 @@ def common_storm_max(storm_dict):
 # Return:how many injuries
 def injuries_in_a_state(given_state2, storm_list1):
     total_injuries = 0
+    if not given_state2 in storm_list1:
+
     for i in storm_list1:
         if given_state2 == storm_list1[6]:
             total_injuries += storm_list1[i][8]
     return total_injuries
 
-
+# Function Name:menu
+# Purpose:To give the choices to the users
+# Parameters:none
+# Return:choice
 def menu():
     print("The choices you have to choose from to learn more about storms are: (A) A graph showing the number of storms in a certain month in a particular state,(B) most common storms that happened in a certain year,"+
           "(C) how many injuries from storms in a specific state, (D) most common storms that happened in a particular state ")
     choice = input("What would you like to know about storms?")
     return choice
+
 
 def main():
     filename = inputFile()
@@ -165,7 +171,7 @@ def main():
     if choice == "B":
         stormdict_1= storm_years(new_file)
         given_storm = input("Please enter a storm type in which you would like to find the year it occurred.")
-        stormdict_2= storm_years_secondfile(given_storm)
+        stormdict_2 = storm_years_secondfile(given_storm)
         outfile_name = input("Please enter the name of an output file.")
         comparison_of_years(outfile_name,filename,stormdict_1,stormdict_2)
     if choice == "C":
