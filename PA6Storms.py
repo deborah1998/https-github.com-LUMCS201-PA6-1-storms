@@ -37,7 +37,7 @@ def read_file(filename):
         inputfile.close()
     except FileNotFoundError:
         print("Sorry this file is not Found")
-        SystemExit(1)
+    SystemExit(1)
     return storms_list1
 
 
@@ -72,9 +72,9 @@ def storm_graph(graph_dict):
 
 
 # Function Name:storm_years
-# Purpose:Do more storms happen in some years than others
-# Parameters:storm list
-# Return:none
+# Purpose:determine what storms happen in some years than others (add storm types to dictionary)
+# Parameters:storm_list1
+# Return:storm_dictionary
 
 
 def storm_years(storm_list1):
@@ -86,24 +86,29 @@ def storm_years(storm_list1):
             storm_dict[line[7]] += 1
     return storm_dict
 
+# Function Name:storm_years_secondfile()
+# Purpose:determine what storms happen in the second file based on user input
+# Parameters:none
+# Return:none
 
 
-def storm_years_secondfile(given_storm):
+def storm_years_secondfile():
     file2 = input("Please enter another file you would like to input and compare to the original file")
     new_file = read_file(file2)
     storm_years(new_file)
 
 
-# Function Name:comparison_of_years
-# Purpose:
-# Parameters:
-# Return:
 
-def comparison_of_years(outfile_name,filename,dict_1,dict_2):
+# Function Name:comparison_of_years
+# Purpose:compare two dictionaries and output how many more  storms of a certain type happen in a certaiyear
+# Parameters:filename,dict_1,dict_2,outfile_name
+# Return:none
+
+def comparison_of_years(filename,dict_1,dict_2,outfile_name):
     inputfile=open(filename,"r")
     outputfile=open (outfile_name,"w")
     for key in dict_1:
-        if key in dict_2:
+        if key == dict_2:
             print(dict_1[key]-dict_2[key],file=outputfile)
     inputfile.close()
     outputfile.close()
@@ -143,8 +148,6 @@ def common_storm_max(storm_dict):
 # Return:how many injuries
 def injuries_in_a_state(given_state2, storm_list1):
     total_injuries = 0
-    if not given_state2 in storm_list1:
-
     for i in storm_list1:
         if given_state2 == storm_list1[6]:
             total_injuries += storm_list1[i][8]
@@ -161,6 +164,12 @@ def menu():
     return choice
 
 
+# Function Name:main
+# Purpose:run the overall program
+# Parameters:none
+# Return:none
+
+
 def main():
     filename = inputFile()
     new_file = read_file(filename)
@@ -173,7 +182,9 @@ def main():
         given_storm = input("Please enter a storm type in which you would like to find the year it occurred.")
         stormdict_2 = storm_years_secondfile(given_storm)
         outfile_name = input("Please enter the name of an output file.")
-        comparison_of_years(outfile_name,filename,stormdict_1,stormdict_2)
+        comparison_of_years(filename,stormdict_1,stormdict_2,outfile_name)
+
+
     if choice == "C":
         given_state2 = input("Please input a state.")
         injuries =injuries_in_a_state(given_state2, new_file)
@@ -183,5 +194,7 @@ def main():
         common_storm(new_file, given_state)
         common_storm_max(new_file)
         print("The storm with the highest number of occurrences, occurred",common_storm_max(new_file),"times.")
+
+
 
 main()
