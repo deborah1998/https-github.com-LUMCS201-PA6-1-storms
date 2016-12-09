@@ -92,7 +92,7 @@ def storm_years(storm_list1):
 # Return:none
 
 
-def storm_years_secondfile():
+def storm_years_secondfile(given_storm):
     file2 = input("Please enter another file you would like to input and compare to the original file")
     new_file = read_file(file2)
     storm_years(new_file)
@@ -109,7 +109,7 @@ def comparison_of_years(filename,dict_1,dict_2,outfile_name):
     outputfile=open (outfile_name,"w")
     for key in dict_1:
         if key == dict_2:
-            print(dict_1[key]-dict_2[key],file=outputfile)
+            print(dict_2[key]-dict_1[key],file=outputfile)
     inputfile.close()
     outputfile.close()
 
