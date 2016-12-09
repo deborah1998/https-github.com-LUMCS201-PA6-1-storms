@@ -47,7 +47,6 @@ def read_file(filename):
 # Return:graph
 
 def storm_graph_dict(storms_list1):
-    import pylab
     graph_dict = {}
     for graph_dict in storms_list1:
         if storms_list1[0][4:5] not in graph_dict:
@@ -61,7 +60,9 @@ def storm_graph_dict(storms_list1):
 # Purpose:To generate a graph for the storms per month
 # Parameters:storm list
 # Return:graph
+
 def storm_graph(graph_dict):
+    import pylab
     keys_list = graph_dict.keys()
     values_list = graph_dict.values()
 
@@ -107,8 +108,8 @@ def storm_years_secondfile(given_storm):
 def comparison_of_years(filename,dict_1,dict_2,outfile_name):
     inputfile=open(filename,"r")
     outputfile=open (outfile_name,"w")
-    for key in dict_1:
-        if key == dict_2:
+    if key in dict_1:
+        if key in  dict_2:
             print(dict_2[key]-dict_1[key],file=outputfile)
     inputfile.close()
     outputfile.close()
