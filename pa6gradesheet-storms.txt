@@ -1,0 +1,48 @@
+CS201 Programming Assignment 6 checklist & grading sheet
+PA Grade = 42.25/60
+* Just under 24 hours late, which is -15% (-9pts)
+Comments:
+3/3 Intro comments complete and clear 
+0.5/2 Appropriate in-line commentary given 
+2/2 Function header comments included with name of programmer - missing name of lead programmer on all functions
+
+Format:
+1/1 Proper use of upper/lowercase
+1/1 Appropriate use of whitespace
+
+Supporting Documents:
+3/3 Reflection
+
+Correctness/Completeness Issues:
+3/3 User provides requested input
+3.5/4 All appropriate error protection used (file, input values) - need to change state user input to uppercase so it matches your data. need try/except in comparison function for output file.
+1.5/3 Correctly implemented menu - does not loop. need if/elif/else, not all if statements.
+3/3 Reads from the file(s) correctly and stores data for given problem
+3.5/5 Do some months have more storms than others? Create a graph that displays the number of storms overall per month throughout the year (i.e. the number of total storms in January, then February, etc). - crashes
+There is an error in the creation of the dictionary. You always set values in a dictionary using "dictionary[key] = value". 
+If you leave out the [key] part, then you've turned your variable into a normal variable and it is no longer a dictionary, which in this case causes your graph code to crash.
+Related to that, you can't re-use the variable graph_dict in your loop. It can't be two different things at once.
+Also have a typo, calling "ploy" instead of "plot".
+4/5 Do more storms happen in some years than others? Ask the user for a second file as input. Then compare how many more storms of each type happened in this year versus the first input file. Output to file (storm, difference)  
+- storm_years_secondfile never returns anything, and never calls the function storm_years to create the second dictionary, so stormdict_2 doesn't have data in it. That makes it impossible for the comparison function to do anything.
+- should do for all storm types, but code asks user for a single storm type.
+Have "if" instead of "for" for the loop (first if) in comparison_of_years, so code crashes instead of comparing (in addition to issue mentioned above).
+4.25/5 What is the most common storm for a particular state? The user provides the state. - need to state the type of storm that was most common in the output, not just the number of times it occurred.
+- answer is probably wrong, as it says 31 times for every state.
+Looking at code, the if statement for finding max is wrong. The key is the key to the dictionary, but the code is using it as a string not a key, and then typecasting it to an int. Instead you need to compare dictionary[key] to the biggest value.
+2/4 Question of your choosing. - there are 2 errors in injuries_in_a_state that prevents the code from working correctly. The first is that the variable "i" is referring to a particular list in your storm list, not an index. so instead of storm_list1[6] you need i[6]. Same type of problem on the line below that.
+Second issue is that i[8] needs to be typecast to a number for it to be added to total_injuries.
+1/1 No other logic errors
+
+Design Issues:
+0.75/1 Appropriate variable names - new_file is not a great name for a list, as it sounds like a filename instead.
+5/5 Appropriate function design
+2/2 Reasonable data structure choices
+2.75/3 Clear prompts - menu would be easier to read if each option was on its own line. Menu is case-sensitive but shouldn't be (A and a should both work). 
+4/4 Clear and well formatted output
+
+
+Extra Credit:
+
+
+Additional Comments:
